@@ -1,0 +1,87 @@
+/* Shared styling for the LayerShelf public pages. Self-contained: no external
+   fonts or scripts, so the pages work on any static host and keep loading if a
+   CDN is blocked. */
+:root {
+  --bg: #f7f8f7;
+  --surface: #ffffff;
+  --text: #16211f;
+  --muted: #5a6866;
+  --line: #dfe4e2;
+  --accent: #1f6f5c;
+  --accent-soft: #e8f2ef;
+  --warn-bg: #fff8e6;
+  --warn-line: #e6d29a;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1719;
+    --surface: #16211f;
+    --text: #e8efec;
+    --muted: #9bada9;
+    --line: #253330;
+    --accent: #5fbfa3;
+    --accent-soft: #142823;
+    --warn-bg: #241f10;
+    --warn-line: #4d4326;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1719;
+  --surface: #16211f;
+  --text: #e8efec;
+  --muted: #9bada9;
+  --line: #253330;
+  --accent: #5fbfa3;
+  --accent-soft: #142823;
+  --warn-bg: #241f10;
+  --warn-line: #4d4326;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.wrap { max-width: 44rem; margin: 0 auto; padding: 0 16px 5rem; }
+
+header.site {
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+  margin-bottom: 2.5rem;
+}
+header.site .wrap { padding-top: 1.25rem; padding-bottom: 1.25rem; display: flex; gap: 1rem; align-items: baseline; flex-wrap: wrap; }
+header.site a.brand { font-weight: 650; color: var(--text); text-decoration: none; font-size: 1.05rem; letter-spacing: -0.01em; }
+header.site nav { margin-left: auto; display: flex; gap: 1.25rem; }
+header.site nav a { color: var(--muted); text-decoration: none; font-size: 0.94rem; }
+header.site nav a:hover, header.site nav a:focus { color: var(--accent); text-decoration: underline; }
+
+h1 { font-size: 1.85rem; line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 0.4rem; }
+h2 { font-size: 1.2rem; margin: 2.4rem 0 0.6rem; letter-spacing: -0.01em; }
+h3 { font-size: 1rem; margin: 1.6rem 0 0.4rem; }
+p, li { color: var(--text); }
+a { color: var(--accent); }
+.lede { color: var(--muted); font-size: 1.05rem; margin-top: 0; }
+.updated { color: var(--muted); font-size: 0.88rem; margin: 0 0 2rem; }
+
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.94rem; display: block; overflow-x: auto; }
+th, td { text-align: left; padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 600; white-space: nowrap; }
+code { background: var(--accent-soft); padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.88em; font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; word-break: break-word; }
+
+.callout {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  padding: 0.9rem 1.1rem;
+  margin: 1.5rem 0;
+}
+.callout p:first-child { margin-top: 0; }
+.callout p:last-child { margin-bottom: 0; }
+.todo { background: var(--warn-bg); border: 1px solid var(--warn-line); border-left-width: 3px; }
+
+footer.site { border-top: 1px solid var(--line); margin-top: 3.5rem; padding-top: 1.5rem; color: var(--muted); font-size: 0.88rem; }
+footer.site p { margin: 0.3rem 0; }
