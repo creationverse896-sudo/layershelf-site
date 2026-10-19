@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — LayerShelf</title>
+<meta name="description" content="How LayerShelf handles your data. Everything stays on your PC: no account, no telemetry, no uploads.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">LayerShelf</a>
+    <nav>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Privacy Policy</h1>
+  <p class="lede">LayerShelf keeps your data on your PC. There is no account, no telemetry, and nothing is uploaded.</p>
+  <p class="updated">Applies to LayerShelf 1.0 for Windows · Last updated 19 October 2026</p>
+
+  <h2>Who we are</h2>
+  <p>LayerShelf is published by Cardiff 3D Printing Services Ltd, a company registered in
+    England and Wales, company number 15143074,
+    registered office 15 Easedale Close, Bristol, BS10 6EW.</p>
+  <p>For any question about this policy, contact <a href="mailto:creationverse896@gmail.com">creationverse896@gmail.com</a>.</p>
+
+  <h2>The short version</h2>
+  <p>LayerShelf is a desktop application that catalogues 3D model files already stored on your computer. It
+    builds that catalogue in a database inside your own Windows user profile. It has no user account and no
+    sign-in. It collects no telemetry, no analytics and no crash reports. In this release it makes no network
+    connections at all: the application's built-in web view is blocked from the network, and every
+    network-capable feature in the code is switched off by configuration and cannot be enabled by a user.</p>
+  <p><strong>We do not receive your data, because your data never leaves your computer.</strong></p>
+
+  <h2>What LayerShelf stores, and where</h2>
+  <p>Everything below is written inside your own Windows profile, at
+    <code>%APPDATA%\cardiff-model-library-desktop</code>. None of it is transmitted anywhere.</p>
+  <table>
+    <thead><tr><th>What</th><th>Contents</th></tr></thead>
+    <tbody>
+      <tr><td><code>cardiff-model-library.db</code></td><td>The catalogue: file paths and names, content hashes, your notes, tags, ratings, categories, how often you opened something, the print queue, printer notes and an activity journal. This is a plain, unencrypted database file.</td></tr>
+      <tr><td>Recovery points and <code>.cmlx</code> exports</td><td>Copies of the catalogue, encrypted with a passphrase you choose.</td></tr>
+      <tr><td><code>action-recovery\</code></td><td>Copies of files moved by a verified move, kept so you can undo it, until you clear them from <em>File → Recovery storage</em>.</td></tr>
+      <tr><td><code>thumbnail-cache\</code></td><td>Preview images generated from your models. A preview can identify a model, so treat it as you would the model itself.</td></tr>
+      <tr><td><code>boot-trace.txt</code>, <code>startup-error.txt</code></td><td>Start-up stage names and any fatal error text. These may include the path to your profile, which contains your Windows account name.</td></tr>
+      <tr><td>Printer photos</td><td>Stored inside the printer-notes record, only if you add one.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>What leaves your PC</h2>
+  <p>Nothing — neither automatically nor as a result of anything you do in the app. This was confirmed on the
+    packaged release: no LayerShelf process opened a remote connection during verification.</p>
+  <p>To be precise about the limit of that testing: Windows and the embedded browser engine may perform their
+    own background activity unrelated to LayerShelf, such as certificate checks. That is outside the
+    application's control and outside what we verified.</p>
+
+  <h2>Features that would use the network, and are switched off</h2>
+  <p>The code contains four features that would need a network connection. All are disabled in this release by
+    blank configuration and cannot be switched on from inside the app. If a future version enables one, it will
+    ship with its own updated privacy wording, and this page will say so.</p>
+  <ul>
+    <li><strong>Licence activation</strong> — would send a licence key and your PC's hostname to a licensing provider.</li>
+    <li><strong>Update checking</strong> — would request a small update file. Nothing personal is sent, though the server hosting it would see your IP address, as with any web request.</li>
+    <li><strong>Developer update channel</strong> — an internal tool, never enabled in a customer build.</li>
+    <li><strong>OneDrive sync</strong> — would place an encrypted catalogue bundle, including thumbnails, into your own Microsoft OneDrive app folder.</li>
+  </ul>
+
+  <h2>Diagnostics and support information</h2>
+  <p>LayerShelf can produce information to help diagnose a problem. It never sends any of it. You choose where
+    it goes.</p>
+  <table>
+    <thead><tr><th>Feature</th><th>Where it goes</th><th>What it contains</th></tr></thead>
+    <tbody>
+      <tr><td>Help → Copy Support Information</td><td>Your clipboard only</td><td>App version, Windows version, database schema version, and the catalogue file path — which includes your Windows account name.</td></tr>
+      <tr><td>Help → Report a Problem</td><td>Your clipboard only</td><td>The same, plus a timestamp. The app then tells you that no online reporting channel is configured.</td></tr>
+      <tr><td>Export diagnostics</td><td>A file you choose</td><td>Version, schema, platform, counts, the kinds of folders scanned and when, recent job status, and error counts grouped by file type. It contains <strong>no</strong> file names, paths, hashes, hostname, username, email address or database location.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Your model files</h2>
+  <ul>
+    <li>Model files are never uploaded.</li>
+    <li>Scanning reads your files; it never modifies or moves them.</li>
+    <li>Recycling a file sends it to the Windows Recycle Bin, where you restore it through Windows, not through LayerShelf.</li>
+    <li>“Open in slicer” hands the file to whichever application Windows associates with that file type. What that application then does is governed by its own privacy policy, not this one.</li>
+  </ul>
+
+  <h2>Children</h2>
+  <p>LayerShelf is a general-purpose tool for managing files and is not directed at children. Because it collects
+    no personal data and has no account, it does not knowingly collect information from anyone.</p>
+
+  <h2>Your rights</h2>
+  <p>Data protection law gives you rights over personal data an organisation holds about you — including access,
+    correction and erasure. <strong>We hold no personal data about you</strong>, because LayerShelf transmits
+    none to us. Everything the application stores is on your own computer and under your control; you can
+    inspect, back up or delete it at any time.</p>
+  <p>If you buy LayerShelf through the Microsoft Store, Microsoft handles the purchase and holds whatever
+    account and payment information that involves, under
+    <a href="https://privacy.microsoft.com/privacystatement" rel="noopener">Microsoft's privacy statement</a>.
+    We never see your payment details.</p>
+
+  <h2>Uninstalling</h2>
+  <p>If you installed LayerShelf from the Microsoft Store, Windows keeps this data in LayerShelf's own app
+    storage and removes it when you uninstall the app. To keep your catalogue, use <strong>Export library</strong>
+    to save a copy somewhere outside the app before uninstalling.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, the date at the top of the page changes with it. A version that enables any feature
+    which sends data will say so explicitly rather than quietly amending this text.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about privacy, or about this policy: <a href="mailto:creationverse896@gmail.com">creationverse896@gmail.com</a>.</p>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>© 2026 Cardiff 3D Printing Services Ltd. LayerShelf is a product of Cardiff 3D Printing Services Ltd.</p>
+    <p><a href="index.html">Home</a> · <a href="support.html">Support</a></p>
+  </div>
+</footer>
+</body>
+</html>
