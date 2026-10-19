@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — LayerShelf</title>
+<meta name="description" content="Get help with LayerShelf: contact, system requirements, known limitations and how to send useful diagnostics.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">LayerShelf</a>
+    <nav>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Support</h1>
+  <p class="lede">A real person reads these. Include the diagnostics below and you will usually get a useful answer first time.</p>
+
+  <div class="callout">
+    <p><strong>Email <a href="mailto:creationverse896@gmail.com">creationverse896@gmail.com</a></strong></p>
+    <p>We aim to reply within two working days.
+      LayerShelf is made in Wales, so replies come during UK working hours.</p>
+  </div>
+
+  <h2>Before you write in</h2>
+  <p>Two things make almost every problem faster to solve.</p>
+  <h3>1. Copy your support information</h3>
+  <p>In LayerShelf, choose <strong>Help → Copy Support Information</strong> and paste the result into your email.
+    It contains the app version, your Windows version and the database schema version. It also contains the path
+    to your catalogue, which includes your Windows account name — remove that line if you would rather not share
+    it, though it is often the useful part.</p>
+  <h3>2. Export diagnostics, if the problem is about scanning or previews</h3>
+  <p>Use <strong>Export diagnostics</strong> and attach the file. It deliberately contains no file names, paths,
+    hashes, username or email address — only counts, versions and error summaries grouped by file type. You can
+    open it in any text editor and read exactly what you are sending before you send it.</p>
+
+  <h2>System requirements</h2>
+  <ul>
+    <li>Windows 10 or Windows 11, 64-bit.</li>
+    <li>Indexed formats: STL, 3MF, OBJ, FBX, STEP/STP, PLY, GLB, glTF, plus models inside ZIP archives.</li>
+    <li>3D previews are available for STL, 3MF, OBJ, FBX, PLY, GLB and glTF. STEP and STP files are catalogued and searchable but do not currently render a 3D preview.</li>
+    <li>Geometry matching — finding the same shape saved under different names — covers STL, 3MF and OBJ.</li>
+    <li>Optional: 7-Zip installed, if you want models inside RAR and 7z archives to be indexed.</li>
+    <li>Allow a few gigabytes of disk space for thumbnails and recovery points on a large library.</li>
+  </ul>
+
+  <h2>Common questions</h2>
+
+  <h3>Where is my data kept? Can I move it?</h3>
+  <p>Everything stays on your PC, inside your Windows profile. See the <a href="privacy.html">privacy policy</a>
+    for what each file holds. To move your catalogue to another PC, use <strong>Export library</strong> and import
+    the file there.</p>
+
+  <h3>Does LayerShelf change or upload my model files?</h3>
+  <p>No. Scanning only reads. Nothing is uploaded — the app makes no network connections at all in this release.</p>
+
+  <h3>A model shows “Preview unavailable”. Is it broken?</h3>
+  <p>Usually not. The file is still catalogued, searchable and safe. Previews are skipped or simplified in a few
+    cases: very large meshes are shown at reduced detail, files above a size limit are not rendered, sliced
+    project files contain print data rather than an editable model, and some files genuinely contain no usable
+    geometry. The card in the library tells you which applies.</p>
+
+  <h3>Some files are marked “Offline”</h3>
+  <p>That source folder is on a drive that is not currently connected. Reconnect the drive and rescan; nothing has
+    been lost from the catalogue.</p>
+
+  <h3>I recycled something by mistake</h3>
+  <p>Recycled files go to the Windows Recycle Bin. Restore them from there — that is a Windows action, so
+    LayerShelf cannot undo it for you. Use <strong>Activity → Open Recycle Bin</strong> to get there quickly.</p>
+
+  <h2>Known limitations</h2>
+  <ul>
+    <li>STEP and STP files are catalogued but have no 3D preview.</li>
+    <li>Very large models are previewed as a simplified mesh so that the viewer stays responsive.</li>
+    <li>Sliced project files (<code>.gcode.3mf</code> from Bambu Studio, OrcaSlicer and similar) hold print data rather than an editable model.</li>
+    <li>Licence activation, cloud sync and update checking are not enabled in this release.</li>
+  </ul>
+
+  <h2>Refunds</h2>
+  <p>LayerShelf is sold through the Microsoft Store, so refunds are handled by Microsoft under their store
+    policies rather than by us. If something is wrong with the app, please write to us first — we would rather
+    fix it.</p>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>© 2026 Cardiff 3D Printing Services Ltd.</p>
+    <p><a href="index.html">Home</a> · <a href="privacy.html">Privacy</a></p>
+  </div>
+</footer>
+</body>
+</html>
