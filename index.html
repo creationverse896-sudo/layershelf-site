@@ -3,55 +3,165 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LayerShelf — every maker's collection perfectly organised</title>
-<meta name="description" content="LayerShelf catalogues the 3D print models already on your PC: searchable, with duplicate and same-geometry detection. Local only, no account, no uploads.">
+<title>LayerShelf — every maker's collection, perfectly organised</title>
+<meta name="description" content="LayerShelf turns the STL, 3MF and OBJ files scattered across your Windows PC into one searchable library, and shows you which ones are the same model saved twice. Local only: no account, no uploads. One-off payment: £9.99 launch price for the first 200 customers, then £12.99.">
+<meta property="og:title" content="LayerShelf — every maker's collection, perfectly organised">
+<meta property="og:description" content="One searchable library for every 3D model on your PC. Finds duplicates, even under different names. Local only, one-off £9.99 launch price.">
+<meta property="og:image" content="images/library.webp">
+<link rel="icon" href="images/favicon-32.png" type="image/png">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="landing">
 <header class="site">
-  <div class="wrap">
-    <a class="brand" href="index.html">LayerShelf</a>
+  <div class="wrap wide">
+    <a class="brand" href="index.html"><img src="images/icon-128.png" alt="" width="28" height="28"> LayerShelf</a>
     <nav>
-      <a href="privacy.html">Privacy</a>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="install.html">Install</a>
       <a href="support.html">Support</a>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
-  <h1>Every maker's collection, perfectly organised</h1>
-  <p class="lede">LayerShelf turns the STL, 3MF and OBJ files scattered across your PC into one searchable
-    library — and shows you which of them are the same model saved three times.</p>
+<main>
+  <section class="hero wrap wide">
+    <div class="hero-copy">
+      <p class="eyebrow">For Windows · for makers with too many STLs</p>
+      <h1>Every 3D model on your PC, in one searchable library.</h1>
+      <p class="lede">LayerShelf finds the STL, 3MF and OBJ files scattered across your folders and downloads, shows
+        them as thumbnails you can actually browse, and tells you which ones are the same model saved twice —
+        even under different names.</p>
+      <div class="cta-row">
+        <a class="button primary" href="#pricing">Get LayerShelf — £9.99 launch price</a>
+        <a class="button" href="#features">See what it does</a>
+      </div>
+      <p class="fine">One-off payment · Windows 10 and 11 · no account, no subscription, nothing uploaded</p>
+    </div>
+    <figure class="shot hero-shot">
+      <img src="images/library.webp" srcset="images/library-800.webp 800w, images/library.webp 1600w"
+        sizes="(max-width: 900px) 100vw, 1100px" width="1600" height="1000"
+        alt="The LayerShelf library: a grid of 3D model thumbnails with a details panel showing a 3D preview of a gear and its quality scores">
+    </figure>
+  </section>
 
-  <h2>What it does</h2>
-  <ul>
-    <li><strong>Finds duplicates properly.</strong> Exact copies are matched by content, so a renamed file is
-      still caught. Same-geometry variants are matched by the shape itself, regardless of how the model was
-      rotated, positioned or scaled.</li>
-    <li><strong>One decision per group.</strong> Review duplicates side by side and keep them, group them as a
-      project, or recycle the spares.</li>
-    <li><strong>Catalogues in place.</strong> Files are never moved or altered unless you plan and confirm a move.</li>
-    <li><strong>Everything else you need.</strong> Thumbnails, tags, ratings, notes, categories, materials,
-      projects, collections, a print queue and printer notes.</li>
-  </ul>
+  <section id="features" class="feature wrap wide">
+    <div class="feature-copy">
+      <h2>Find the same model twice — even when it's called something else</h2>
+      <p>Exact copies are matched by their contents, so <code>vase_twist_final.stl</code> in Downloads is caught as
+        the same file as <code>Twisted vase.stl</code>. Variants are matched by the shape itself, whether they were
+        rotated, moved or scaled.</p>
+      <p>Each group is one decision: compare the copies side by side in 3D, keep the ones you want, and send the
+        spares to the Windows Recycle Bin — where you can still restore them.</p>
+    </div>
+    <figure class="shot">
+      <img src="images/duplicates-800.webp" srcset="images/duplicates-800.webp 800w, images/duplicates.webp 1600w"
+        sizes="(max-width: 900px) 100vw, 640px" width="1600" height="1000" loading="lazy"
+        alt="The Duplicates view comparing two identical twisted vases side by side, with one copy marked to keep and one to recycle">
+    </figure>
+  </section>
 
-  <h2>Local by design</h2>
-  <p>The catalogue is a database on your own PC. There is no account, no telemetry and no analytics, and this
-    release makes no network connections at all. Your models are never uploaded.
-    The <a href="privacy.html">privacy policy</a> sets out exactly what is stored and where.</p>
+  <section class="feature flip wrap wide">
+    <div class="feature-copy">
+      <h2>Multi-part models stay together</h2>
+      <p>A print with a base, a lid and a README is one project, not three loose files. LayerShelf groups
+        multi-file models into projects you can rename, pin and send to the print queue in one go.</p>
+    </div>
+    <figure class="shot">
+      <img src="images/projects-800.webp" srcset="images/projects-800.webp 800w, images/projects.webp 1600w"
+        sizes="(max-width: 900px) 100vw, 640px" width="1600" height="1000" loading="lazy"
+        alt="The Projects view showing a Workshop project with thumbnails of a filament clip, spool holder, knob and cable clip">
+    </figure>
+  </section>
 
-  <h2>Requirements</h2>
-  <p>Windows 10 or Windows 11, 64-bit. See <a href="support.html">support</a> for supported formats and current
-    limitations.</p>
+  <section class="feature wrap wide">
+    <div class="feature-copy">
+      <h2>Your files stay exactly where they are</h2>
+      <p>LayerShelf catalogues your models in place. Setup never uploads or moves a file, and nothing is moved
+        unless you plan and confirm it yourself.</p>
+      <p>There's no account and no telemetry. LayerShelf only goes online to check your licence key, and the
+        catalogue lives on your own PC. <a href="privacy.html">Read the privacy policy.</a></p>
+    </div>
+    <figure class="shot">
+      <img src="images/setup-800.webp" srcset="images/setup-800.webp 800w, images/setup.webp 1600w"
+        sizes="(max-width: 900px) 100vw, 640px" width="1600" height="1000" loading="lazy"
+        alt="LayerShelf's first-run setup: Make thousands of files feel manageable, with cards for appearance, preview density and local-first">
+    </figure>
+  </section>
 
-  <h2>Get in touch</h2>
-  <p>Questions, bugs, or a feature you need: <a href="mailto:creationverse896@gmail.com">creationverse896@gmail.com</a></p>
+  <section class="wrap wide">
+    <h2 class="section-title">Everything else a workshop library needs</h2>
+    <div class="grid">
+      <div class="card"><h3>Search everything</h3><p>Names, folders, tags, notes, category and material, from one box. <kbd>Ctrl</kbd> <kbd>K</kbd> jumps straight to it.</p></div>
+      <div class="card"><h3>3D preview</h3><p>Spin a model before you open a slicer. Drag a file straight from LayerShelf into your slicer.</p></div>
+      <div class="card"><h3>Tags, ratings and notes</h3><p>Rate prints, add tags and categories, record the material, and keep long notes on each model.</p></div>
+      <div class="card"><h3>Print queue and printer notes</h3><p>Queue what's next with quantity and material, and keep notes for each of your printers.</p></div>
+      <div class="card"><h3>Recovery points</h3><p>The catalogue backs itself up, and a restore asks you to confirm first. (Back up your model files separately.)</p></div>
+      <div class="card"><h3>Big libraries welcome</h3><p>Built for collections of thousands of models, with checks that flag files it couldn't read instead of hiding them.</p></div>
+    </div>
+    <p class="formats"><strong>Formats:</strong> STL, 3MF, OBJ, FBX, STEP/STP, PLY, GLB and glTF, plus models inside ZIP files
+      (and RAR or 7z if 7-Zip is installed). 3D previews for STL, 3MF, OBJ, FBX, PLY, GLB and glTF; shape matching for STL,
+      3MF and OBJ.</p>
+  </section>
+
+  <section id="pricing" class="wrap wide">
+    <div class="price-card">
+      <div>
+        <p class="eyebrow">LayerShelf for Windows</p>
+        <p class="price">£9.99 <span>one-off</span></p>
+        <p class="launch">Launch price for the first 200 customers, then £12.99.</p>
+        <ul class="ticks">
+          <li>Runs on Windows 10 and 11 (64-bit)</li>
+          <li>Use it on up to 2 PCs</li>
+          <li>No subscription, no account</li>
+          <li>Download link and licence key emailed straight away</li>
+          <li>14-day no-quibble refund</li>
+        </ul>
+        <a class="button primary big" href="https://layershelf.lemonsqueezy.com/checkout/buy/d1f06dba-b229-40c1-bb49-0395e0bc016d?checkout%5Bdiscount_code%5D=LAUNCH200" data-buy>Buy LayerShelf — £9.99</a>
+        <p class="fine">Checkout, receipts and any VAT are handled by Lemon Squeezy, our reseller.
+          <a href="terms.html">Terms and refunds</a></p>
+      </div>
+      <div class="note">
+        <h3>Before you install</h3>
+        <p>LayerShelf isn't code-signed yet, so Windows shows a blue <em>"Windows protected your PC"</em> screen the
+          first time. Click <strong>More info</strong>, then <strong>Run anyway</strong>.</p>
+        <p>If your PC has <strong>Smart App Control</strong> switched on, Windows blocks unsigned apps completely.
+          Email us before you buy and we'll help.</p>
+        <p><a href="install.html">Step-by-step install guide</a></p>
+        <p class="fine">Windows 10 or 11, 64-bit. Allow a few GB for thumbnails on a large library.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap wide faq">
+    <h2 class="section-title">Questions</h2>
+    <details><summary>Does LayerShelf change or upload my model files?</summary>
+      <p>No. Scanning only reads your files. Nothing is uploaded, and nothing is moved or recycled unless you
+        review and confirm it.</p></details>
+    <details><summary>Do I need an internet connection or an account?</summary>
+      <p>There's no account or sign-in. LayerShelf needs the internet only to check your licence key: once when
+        you activate it, then a one-click check every 30 days. Everything else works offline.</p></details>
+    <details><summary>Can I use it on more than one PC?</summary>
+      <p>Yes, on up to 2 PCs at a time. To move to a new PC, deactivate the old one in the app first. See the
+        <a href="install.html">install guide</a>.</p></details>
+    <details><summary>What if it doesn't work for me?</summary>
+      <p>Ask within 14 days for a full refund. Just reply to your receipt email. See
+        <a href="terms.html">terms and refunds</a>.</p></details>
+    <details><summary>What happens to duplicates I remove?</summary>
+      <p>They go to the Windows Recycle Bin, so you can restore them from there until you empty it.</p></details>
+    <details><summary>Something isn't working on my PC.</summary>
+      <p>Email <a href="mailto:creationverse896@gmail.com">creationverse896@gmail.com</a> — a real person reads
+        it. See the <a href="support.html">support page</a> for what to include.</p></details>
+  </section>
 </main>
 
 <footer class="site">
-  <div class="wrap">
-    <p>© 2026 Cardiff 3D Printing Services Ltd.</p>
-    <p><a href="privacy.html">Privacy</a> · <a href="support.html">Support</a></p>
+  <div class="wrap wide">
+    <p>© 2026 Cardiff 3D Printing Services Ltd · registered in England and Wales, company number 15143074 ·
+      registered office 15 Easedale Close, Bristol, BS10 6EW</p>
+    <p><a href="install.html">Install</a> · <a href="support.html">Support</a> · <a href="terms.html">Terms</a> ·
+      <a href="privacy.html">Privacy</a> ·
+      <a href="mailto:creationverse896@gmail.com">creationverse896@gmail.com</a></p>
   </div>
 </footer>
 </body>

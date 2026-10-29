@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — LayerShelf</title>
-<meta name="description" content="How LayerShelf handles your data. Everything stays on your PC: no account, no telemetry, no uploads.">
+<meta name="description" content="How LayerShelf handles your data. Your files and catalogue stay on your PC: no account, no telemetry, no uploads. Only your licence key is checked online.">
+<link rel="icon" href="images/favicon-32.png" type="image/png">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,16 +13,18 @@
   <div class="wrap">
     <a class="brand" href="index.html">LayerShelf</a>
     <nav>
-      <a href="privacy.html">Privacy</a>
+      <a href="install.html">Install</a>
       <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
     </nav>
   </div>
 </header>
 
 <main class="wrap">
   <h1>Privacy Policy</h1>
-  <p class="lede">LayerShelf keeps your data on your PC. There is no account, no telemetry, and nothing is uploaded.</p>
-  <p class="updated">Applies to LayerShelf 1.0 for Windows · Last updated 19 October 2026</p>
+  <p class="lede">LayerShelf keeps your files and catalogue on your PC. There is no account and no telemetry. The only
+    thing it sends anywhere is your licence key, to check it.</p>
+  <p class="updated">Applies to LayerShelf 1.0 for Windows · Last updated 29 October 2026</p>
 
   <h2>Who we are</h2>
   <p>LayerShelf is published by Cardiff 3D Printing Services Ltd, a company registered in
@@ -32,14 +35,15 @@
   <h2>The short version</h2>
   <p>LayerShelf is a desktop application that catalogues 3D model files already stored on your computer. It
     builds that catalogue in a database inside your own Windows user profile. It has no user account and no
-    sign-in. It collects no telemetry, no analytics and no crash reports. In this release it makes no network
-    connections at all: the application's built-in web view is blocked from the network, and every
-    network-capable feature in the code is switched off by configuration and cannot be enabled by a user.</p>
-  <p><strong>We do not receive your data, because your data never leaves your computer.</strong></p>
+    sign-in. It collects no telemetry, no analytics and no crash reports. Its one network connection is the
+    licence check described below. The application's built-in web view is blocked from the network, and every
+    other network-capable feature in the code is switched off by configuration and cannot be enabled by a user.</p>
+  <p><strong>Your model files and your catalogue never leave your computer.</strong></p>
 
   <h2>What LayerShelf stores, and where</h2>
   <p>Everything below is written inside your own Windows profile, at
-    <code>%APPDATA%\cardiff-model-library-desktop</code>. None of it is transmitted anywhere.</p>
+    <code>%APPDATA%\cardiff-model-library-desktop</code>. None of it is transmitted anywhere. Your licence key is
+    kept there too, encrypted with Windows' own secure storage.</p>
   <table>
     <thead><tr><th>What</th><th>Contents</th></tr></thead>
     <tbody>
@@ -52,19 +56,28 @@
     </tbody>
   </table>
 
-  <h2>What leaves your PC</h2>
-  <p>Nothing — neither automatically nor as a result of anything you do in the app. This was confirmed on the
-    packaged release: no LayerShelf process opened a remote connection during verification.</p>
-  <p>To be precise about the limit of that testing: Windows and the embedded browser engine may perform their
-    own background activity unrelated to LayerShelf, such as certificate checks. That is outside the
-    application's control and outside what we verified.</p>
+  <h2>What leaves your PC: the licence check</h2>
+  <p>LayerShelf checks your licence key with <a href="https://www.lemonsqueezy.com" rel="noopener">Lemon Squeezy</a>,
+    which sells LayerShelf on our behalf. It connects over HTTPS only when you activate or deactivate a PC, or
+    choose <strong>Check now</strong> in <strong>Licence &amp; sync</strong>, which it asks you to do every 30
+    days. It never checks in the background. Each check sends:</p>
+  <ul>
+    <li>your licence key;</li>
+    <li>a name for this activation, made from your PC's network name followed by “· Windows”, so you can tell
+      your PCs apart; and</li>
+    <li>after activation, the activation ID Lemon Squeezy gave this PC.</li>
+  </ul>
+  <p>Lemon Squeezy, like any web server, also sees your IP address. No file names, model files, catalogue
+    contents, usage information or Windows account details are sent. Lemon Squeezy handles this information
+    under its <a href="https://www.lemonsqueezy.com/privacy" rel="noopener">privacy policy</a>.</p>
+  <p>Windows and the embedded browser engine may perform their own background activity unrelated to
+    LayerShelf, such as certificate checks. That is outside the application's control.</p>
 
   <h2>Features that would use the network, and are switched off</h2>
-  <p>The code contains four features that would need a network connection. All are disabled in this release by
-    blank configuration and cannot be switched on from inside the app. If a future version enables one, it will
-    ship with its own updated privacy wording, and this page will say so.</p>
+  <p>The code contains three more features that would need a network connection. All are disabled in this
+    release by blank configuration and cannot be switched on from inside the app. If a future version enables
+    one, it will ship with its own updated privacy wording, and this page will say so.</p>
   <ul>
-    <li><strong>Licence activation</strong> — would send a licence key and your PC's hostname to a licensing provider.</li>
     <li><strong>Update checking</strong> — would request a small update file. Nothing personal is sent, though the server hosting it would see your IP address, as with any web request.</li>
     <li><strong>Developer update channel</strong> — an internal tool, never enabled in a customer build.</li>
     <li><strong>OneDrive sync</strong> — would place an encrypted catalogue bundle, including thumbnails, into your own Microsoft OneDrive app folder.</li>
@@ -96,18 +109,19 @@
 
   <h2>Your rights</h2>
   <p>Data protection law gives you rights over personal data an organisation holds about you — including access,
-    correction and erasure. <strong>We hold no personal data about you</strong>, because LayerShelf transmits
-    none to us. Everything the application stores is on your own computer and under your control; you can
-    inspect, back up or delete it at any time.</p>
-  <p>If you buy LayerShelf through the Microsoft Store, Microsoft handles the purchase and holds whatever
-    account and payment information that involves, under
-    <a href="https://privacy.microsoft.com/privacystatement" rel="noopener">Microsoft's privacy statement</a>.
-    We never see your payment details.</p>
+    correction and erasure. <strong>The app itself sends us nothing.</strong> Everything it stores is on your own
+    computer and under your control; you can inspect, back up or delete it at any time.</p>
+  <p>When you buy LayerShelf, <a href="https://www.lemonsqueezy.com" rel="noopener">Lemon Squeezy</a> takes the
+    payment as our reseller, under its <a href="https://www.lemonsqueezy.com/privacy" rel="noopener">privacy
+    policy</a>. We never see your card details. We can see your name, email address, country, order details and
+    which PCs your licence is activated on (by the activation name above), and use them only to deliver your
+    download, manage your licence, answer support questions and meet our tax and accounting obligations. Email
+    us to see, correct or delete what we hold.</p>
 
   <h2>Uninstalling</h2>
-  <p>If you installed LayerShelf from the Microsoft Store, Windows keeps this data in LayerShelf's own app
-    storage and removes it when you uninstall the app. To keep your catalogue, use <strong>Export library</strong>
-    to save a copy somewhere outside the app before uninstalling.</p>
+  <p>Uninstalling LayerShelf removes the app but leaves your catalogue in
+    <code>%APPDATA%\cardiff-model-library-desktop</code>, so a reinstall picks up where you left off. To remove
+    everything, deactivate the PC in <strong>Licence &amp; sync</strong> first, uninstall, then delete that folder.</p>
 
   <h2>Changes to this policy</h2>
   <p>If this policy changes, the date at the top of the page changes with it. A version that enables any feature
@@ -120,7 +134,8 @@
 <footer class="site">
   <div class="wrap">
     <p>© 2026 Cardiff 3D Printing Services Ltd. LayerShelf is a product of Cardiff 3D Printing Services Ltd.</p>
-    <p><a href="index.html">Home</a> · <a href="support.html">Support</a></p>
+    <p><a href="index.html">Home</a> · <a href="install.html">Install</a> · <a href="support.html">Support</a> ·
+      <a href="terms.html">Terms</a></p>
   </div>
 </footer>
 </body>

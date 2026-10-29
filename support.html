@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Support — LayerShelf</title>
 <meta name="description" content="Get help with LayerShelf: contact, system requirements, known limitations and how to send useful diagnostics.">
+<link rel="icon" href="images/favicon-32.png" type="image/png">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,8 +13,9 @@
   <div class="wrap">
     <a class="brand" href="index.html">LayerShelf</a>
     <nav>
-      <a href="privacy.html">Privacy</a>
+      <a href="install.html">Install</a>
       <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
     </nav>
   </div>
 </header>
@@ -58,7 +60,13 @@
     the file there.</p>
 
   <h3>Does LayerShelf change or upload my model files?</h3>
-  <p>No. Scanning only reads. Nothing is uploaded — the app makes no network connections at all in this release.</p>
+  <p>No. Scanning only reads. Nothing is uploaded — the app's only network connection is the licence check.</p>
+
+  <h3>My licence key won't activate</h3>
+  <p>Check you're online, and copy the key from your receipt email without any spaces around it. If it says the
+    key is already in use on two PCs, deactivate one of them in <strong>Licence &amp; sync</strong>, or email us
+    if that PC is gone. Lost the email? Write to us from the address you bought with and we'll resend the key.
+    The <a href="install.html">install guide</a> covers activation step by step.</p>
 
   <h3>A model shows “Preview unavailable”. Is it broken?</h3>
   <p>Usually not. The file is still catalogued, searchable and safe. Previews are skipped or simplified in a few
@@ -79,19 +87,25 @@
     <li>STEP and STP files are catalogued but have no 3D preview.</li>
     <li>Very large models are previewed as a simplified mesh so that the viewer stays responsive.</li>
     <li>Sliced project files (<code>.gcode.3mf</code> from Bambu Studio, OrcaSlicer and similar) hold print data rather than an editable model.</li>
-    <li>Licence activation, cloud sync and update checking are not enabled in this release.</li>
+    <li>Cloud sync and automatic update checking are not enabled in this release.</li>
   </ul>
 
+  <h3>Windows warned me when I ran the installer</h3>
+  <p>The download from this website isn't code-signed yet, so Windows shows <em>"Windows protected your PC"</em>
+    the first time. Choose <strong>More info</strong>, then <strong>Run anyway</strong>. If Smart App Control is
+    switched on, Windows blocks the installer completely; email us and we'll help.</p>
+
   <h2>Refunds</h2>
-  <p>LayerShelf is sold through the Microsoft Store, so refunds are handled by Microsoft under their store
-    policies rather than by us. If something is wrong with the app, please write to us first — we would rather
-    fix it.</p>
+  <p>Ask within 14 days of buying for a full refund: reply to your receipt email or write to us. If something is
+    wrong with LayerShelf, please tell us too — we would rather fix it. See <a href="terms.html">terms and
+    refunds</a>.</p>
 </main>
 
 <footer class="site">
   <div class="wrap">
     <p>© 2026 Cardiff 3D Printing Services Ltd.</p>
-    <p><a href="index.html">Home</a> · <a href="privacy.html">Privacy</a></p>
+    <p><a href="index.html">Home</a> · <a href="install.html">Install</a> · <a href="terms.html">Terms</a> ·
+      <a href="privacy.html">Privacy</a></p>
   </div>
 </footer>
 </body>
